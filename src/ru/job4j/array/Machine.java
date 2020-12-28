@@ -11,7 +11,7 @@ public class Machine {
         for (int i = 0; i < coins.length; i++) {
             while (size >= coins[i]) {
                 size = size - coins[i];
-                rsl[i] = coins[i];
+                rsl[count] = coins[i];
                 count++;
             }
         }
