@@ -11,7 +11,6 @@ public class MultiMax {
         } else if (first < third) {
             result = third;
         }
-
         return result;
     }
 }
