@@ -18,6 +18,18 @@ public class MaxTest {
     }
 
     @Test
+    public void whenMax2To8To6Then8() {
+        int result = Max.max(2, 8, 6);
+        assertThat(result, is(8));
+    }
+
+    @Test
+    public void whenMax7To2To4To1Then2() {
+        int result = Max.max(7, 2, 4, 1);
+        assertThat(result, is(7));
+    }
+
+    @Test
     public void whenMax2To2Then2() {
         int result = Max.max(2, 2);
         assertThat(result, is(2));
