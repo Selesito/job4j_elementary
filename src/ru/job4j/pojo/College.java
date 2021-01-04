@@ -8,6 +8,9 @@ public class College {
         student.setPatronymic("Иванович");
         student.setGroup("Дизайнеров");
         student.setEntrance(23);
-        System.out.println(student.getSurname()  + " " + student.getName() + " " + student.getPatronymic() + " поступил в группу " + student.getGroup() + " номер " + student.getEntrance());
+        System.out.println(student.getSurname()  + " "
+                + student.getName() + " " + student.getPatronymic()
+                + " поступил в группу " + student.getGroup()
+                + " номер " + student.getEntrance());
     }
 }
