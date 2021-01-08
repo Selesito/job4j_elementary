@@ -1,11 +1,14 @@
 package ru.job4j.io;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int value = 11;
+        String name = null;
         System.out.println("Игра 11 спичек!");
         System.out.println("Два игрока по очереди берут от 1 до 3 спичек.");
         while (value > 0) {
@@ -18,7 +21,7 @@ public class Matches {
             value = value - playerOne;
             if (value <= 0) {
                 System.out.println("Осталось 0 спичек");
-                System.out.println("Игорь победил!");
+                name = "Игорь победил!";
                 break;
             }
             System.out.println("Осталось " + " " + value + " " + "спичек");
@@ -31,10 +34,11 @@ public class Matches {
             value = value - playerTwo;
             if (value <= 0) {
                 System.out.println("Осталось 0 спичек");
-                System.out.println("Иван победил!");
+                name = "Иван победил!";
                 break;
             }
             System.out.println("Осталось " + " " + value + " " + "спичек");
         }
+        System.out.println(name);
     }
 }
