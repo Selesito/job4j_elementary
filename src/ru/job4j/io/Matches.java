@@ -8,16 +8,30 @@ public class Matches {
         int value = 11;
         System.out.println("Игра 11 спичек!");
         System.out.println("Два игрока по очереди берут от 1 до 3 спичек.");
-        while (true) {
-            int select = Integer.valueOf(input.nextLine());
-            if (select < 1 || select > 3) {
+        while (value > 0) {
+            System.out.println("Игорь введите количество спичек");
+            int playerOne = Integer.valueOf(input.nextLine());
+            if (playerOne < 1 || playerOne > 3) {
                 System.out.println("Вы ввели некоректное чило, введите от 1 до 3!");
                 continue;
             }
-            value = value - select;
+            value = value - playerOne;
             if (value <= 0) {
                 System.out.println("Осталось 0 спичек");
-                System.out.println("Вы победили!");
+                System.out.println("Игорь победил!");
+                break;
+            }
+            System.out.println("Осталось " + " " + value + " " + "спичек");
+            System.out.println("Иван введите количество спичек");
+            int playerTwo = Integer.valueOf(input.nextLine());
+            if (playerTwo < 1 || playerTwo > 3) {
+                System.out.println("Вы ввели некоректное чило, введите от 1 до 3!");
+                continue;
+            }
+            value = value - playerTwo;
+            if (value <= 0) {
+                System.out.println("Осталось 0 спичек");
+                System.out.println("Иван победил!");
                 break;
             }
             System.out.println("Осталось " + " " + value + " " + "спичек");
